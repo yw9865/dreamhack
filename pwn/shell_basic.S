@@ -8,12 +8,12 @@ main:
 pop rdi
 xor rsi, rsi
 xor rdx, rdx
-mov rax, 2	;syscall open
+mov rax, 2	#syscall open
 syscall
 
 mov rdi, 1
-mov rsi, rax	; in_fd
+mov rsi, rax	# in_fd
 xor edx, edx
 mov r10, 50
-mov rax, 40	;syscall sendfile
+mov rax, 40	#syscall sendfile
 syscall
